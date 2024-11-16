@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.note-list{
+
+  display: grid ; 
+
+  grid-gap: 1rem; 
+}
+
+
+.note{
+  background-color: rgb(233, 233, 77);
+
+  
+
+  padding: 1rem;
+
+  border-radius: 1rem;
+
+  height: 10rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+
+  justify-content: space-between;
+}
+
+.note-footer{
+
+  display: flex;
+
+  justify-content: space-between;
+}

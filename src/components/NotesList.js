@@ -1,4 +1,6 @@
-import Note from './Note'
+import Note from './Note' ; 
+ 
+import NewNote from './NewNote' ; 
 
 const NoteList = () => {
 
@@ -6,9 +8,15 @@ const NoteList = () => {
 
         <div className="note-list">
 
-            <Note/>
-            <Note/>
-            <Note/>
+            {/* <Note/>     now we wont render components like this becuase we want to add components dynamically ; 
+            <Note/>         so we need to run loop for it ; 
+            <Note/> */} 
+
+            <Note text = {"add"} date = {"add"}/>
+
+
+            <NewNote/>
+
         </div>
     ) ; 
 

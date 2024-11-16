@@ -13,6 +13,25 @@ code {
 }
 
 
+
+.container{
+
+   max-width: 960px;  /* isse badhi screen mein project khologe toh pura content bich mein aa jayga kynki humne sirf 
+   width na likh kar max-width likha hai , usse ye hoga ki conainer ki max width 950 px jaygi now , isse chhoti
+   screen mein koi farak nhi padhega but badhi screen mein saara content bich mein aa jayga kyonki iske next step mein
+   margin left and margin right auto kar diya hai */
+
+   margin-left: auto;
+
+   margin-right: auto;
+
+   padding-right: 10px; /* by this chhoti sccreen jab hogi tab note element ek dam laptop ke end se na ho kar
+   thoda gap bana lega */
+
+   padding-left: 10px;
+}
+
+
 .note-list{
 
   display: grid ;   
@@ -22,7 +41,7 @@ code {
   grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));  /*very imprtant line , it is making note-app project
   responsive */
 
-  
+
 
    /* now agar humein repeat ke andar sabse phle likhna hota hai ki ek row ke andar kitne column rakhne hain 
    since humein responsive banana hai aur kitne column banne hain wo dpeend karwana hai , screen aur space ke 

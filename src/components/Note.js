@@ -1,11 +1,11 @@
 import { MdDelete } from 'react-icons/md';
 
-const Note = () => {
+const Note = ( {text , date }) => {
 	return (
 		<div className='note'>
-			<span>text</span>
+			<span>{text}</span>
 			<div className='note-footer'>
-				<small>data</small>
+				<small>{date}</small>
 				<MdDelete/>
 			</div>
 		</div>

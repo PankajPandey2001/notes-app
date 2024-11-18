@@ -83,3 +83,23 @@ code {
 
   justify-content: space-between;
 }
+
+.new{
+  background-color: rgb(122, 224, 224);
+
+}
+
+
+
+
+.text{
+
+    border: none;
+
+    background-color: rgb(122, 224, 224);
+}
+
+.text:focus{  /*ye isliye kyonki let say textarea mein jab jaaye toh outline na bane matlab border sa na bane */
+
+  outline:none ; 
+}

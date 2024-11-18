@@ -2,7 +2,7 @@ import Note from './Note' ;
  
 import NewNote from './NewNote' ; 
 
-const NoteList = () => {
+const NotesList = ( {notes , addNote}) => {
 
     return (
 
@@ -12,10 +12,21 @@ const NoteList = () => {
             <Note/>         so we need to run loop for it ; 
             <Note/> */} 
 
-            <Note text = {"add"} date = {"add"}/>
+           {
+             notes.map( (note) => (
+
+                <Note text = {note.text} date = {note.date}/>
+
+             )) 
 
 
-            <NewNote/>
+            }
+
+
+            <NewNote addNote = {addNote}/>
+
+        
+
 
         </div>
     ) ; 
@@ -23,4 +34,4 @@ const NoteList = () => {
 
 }
 
-export default NoteList ; 
+export default NotesList ; 

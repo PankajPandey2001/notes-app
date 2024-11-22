@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdDelete } from 'react-icons/md';
 
-const NewNote = ({addNote}) => {
+const NewNote = ({addNote }) => {
 
 
     const[noteText , setNoteText] = useState('');
@@ -16,8 +16,14 @@ const NewNote = ({addNote}) => {
 
     const handleClick =() =>{ // this is to add this new note in js project ; 
 
-           
+        if(noteText.length  > 0 )
         addNote(noteText) ; 
+
+
+        // now jab tak niche wali line nhi likhi thi toh jo ek baar likh diya wo hi rh ja ra tha so 
+        // once added we need to again make noteText empty 
+
+        setNoteText('') ; 
     }
 
 
@@ -40,7 +46,7 @@ const NewNote = ({addNote}) => {
            </textarea>
 
 			<div className='note-footer'>
-				<small> 200 characters remainig</small>
+				<small> {200-noteText.length} characters remainig</small>
 				<button className='save' onClick={handleClick}>
 
                     save

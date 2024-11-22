@@ -2,7 +2,7 @@ import Note from './Note' ;
  
 import NewNote from './NewNote' ; 
 
-const NotesList = ( {notes , addNote}) => {
+const NotesList = ( {notes , addNote , deleteNote}) => {
 
     return (
 
@@ -15,7 +15,7 @@ const NotesList = ( {notes , addNote}) => {
            {
              notes.map( (note) => (
 
-                <Note text = {note.text} date = {note.date}/>
+                <Note text = {note.text} date = {note.date}  id = {note.id} deleteNote = {deleteNote}/>
 
              )) 
 
@@ -23,7 +23,7 @@ const NotesList = ( {notes , addNote}) => {
             }
 
 
-            <NewNote addNote = {addNote}/>
+            <NewNote addNote = {addNote} />
 
         
 

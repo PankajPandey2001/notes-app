@@ -1,12 +1,18 @@
 import { MdDelete } from 'react-icons/md';
 
-const Note = ( {text , date }) => {
+const Note = ( {text , date ,id , deleteNote}) => {
+
+    const handleDelete = () =>{
+        deleteNote(id) ; 
+    }
+
+
 	return (
 		<div className='note'>
 			<span>{text}</span>
 			<div className='note-footer'>
 				<small>{date}</small>
-				<MdDelete/>
+				<MdDelete  className='delete-icon' onClick={handleDelete}/>
 			</div>
 		</div>
 	);

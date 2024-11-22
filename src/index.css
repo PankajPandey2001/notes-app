@@ -103,3 +103,8 @@ code {
 
   outline:none ; 
 }
+
+.delete-icon:hover{
+   
+    cursor: pointer;
+}

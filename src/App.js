@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import NotesList from './components/NotesList'
 
+import { FaSearch } from "react-icons/fa";
+
 import {nanoid} from 'nanoid'
 
 const App = () => {  // function name should be in caps as well as name of js file also ; 
   
   const[notes, setNotes] = useState([])  ; 
   
+
+  const[search , setSearch] = useState('') ; 
 
   const deleteNote = (id)  => {
 
@@ -48,9 +52,18 @@ const App = () => {  // function name should be in caps as well as name of js fi
 
   return (
 
+
+
     <div className="container">
+
+
+     <div className='search'>
+     <FaSearch />
+      <input className='search-input' placeholder='Type to search...' value={search} onChange={(event) => setSearch(event.target.value)} ></input>
+           
+      </div>
        
-       <NotesList notes = {notes} addNote = {addNote}  deleteNote = {deleteNote}/>
+       <NotesList notes = {notes.filter((note) => note.text.includes(search))} addNote = {addNote}  deleteNote = {deleteNote}/>
 
     </div>
   )

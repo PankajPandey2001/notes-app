@@ -8,6 +8,8 @@ const NewNote = ({addNote }) => {
 
     const handleChange = (e) =>{
 
+
+       if(e.target.value.length <= 200)
        setNoteText(e.target.value) ; 
 
 
@@ -36,7 +38,7 @@ const NewNote = ({addNote }) => {
 
         <div className='note new'>  
 			
-           <textarea className='text' placeholder='Write to make note '
+           <textarea id='textarea' className='text' placeholder='Write to make note '
               rows='8' cols='10' 
               value={noteText} 
               onChange={handleChange}
@@ -44,6 +46,10 @@ const NewNote = ({addNote }) => {
            >
                 
            </textarea>
+
+         
+
+   
 
 			<div className='note-footer'>
 				<small> {200-noteText.length} characters remainig</small>

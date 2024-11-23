@@ -21,9 +21,9 @@ const App = () => {  // function name should be in caps as well as name of js fi
   const handleToggle = () => {
 
 
-    console.log(darkMode);
+    
      setDarkMode(!darkMode) ; 
-   console.log(darkMode) ; 
+  
 
      
   }
@@ -70,10 +70,9 @@ const App = () => {  // function name should be in caps as well as name of js fi
 
   return (
 
-// to dynamically give a classname to an element ; 
 
 
-
+// to dynamically give a classname to an element ; here we are using tertiary operator ; 
     <div className={ darkMode ? 'dark-mode' : 'no'}  >  
 
 
@@ -81,7 +80,7 @@ const App = () => {  // function name should be in caps as well as name of js fi
     <div className="container">
       
 
-        <header  >
+        <header>
             <h1> Notes App</h1>
 
             <button  onClick={handleToggle} className='toggle-button'> Toggle </button>
@@ -91,6 +90,8 @@ const App = () => {  // function name should be in caps as well as name of js fi
      <FaSearch />
       <input className='search-input' placeholder='Type to search...' value={search} onChange={(event) => setSearch(event.target.value)} ></input>
            
+
+
       </div>
        
        <NotesList notes = {notes.filter((note) => note.text.includes(search))} addNote = {addNote}  deleteNote = {deleteNote}/>

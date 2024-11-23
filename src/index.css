@@ -19,11 +19,19 @@ header{
 
 
   display: flex;
+  /* agar display direction kuch nhi diya hai , toh displya flex karne se saare element same horizonatal level 
+  par aa jeyenge , means ek ke bagal mein ek element aise honge ; ,
+  and if you will do flex-direction : column toh fir ek ke niche ek ;  */
 
-  align-items: center;
+
+  align-items: center; 
+
+  /* since abhi flex direction kuch nhi diya toh saare element agal bagal honge , par ho sakta hai halka sa ek upar
+  ho aur ek eleemnt niche , ab unko same level mein laane ke liye align items center kar do  */
 
 
-  justify-content: space-between;
+
+  justify-content: space-between; /* elements ke bich mein equal space laane ke liye */
 }
 
 
@@ -46,6 +54,8 @@ header{
   height: 100vh;
 }
 
+
+/* .classname likhe ke baad agar tag ka naam likhoge it means us container ke andar jis jiska bhi wo tag hai */
 .dark-mode h1{
    color: white;
 }

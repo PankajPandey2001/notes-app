@@ -5,12 +5,30 @@ import { FaSearch } from "react-icons/fa";
 
 import {nanoid} from 'nanoid'
 
+
+
 const App = () => {  // function name should be in caps as well as name of js file also ; 
   
   const[notes, setNotes] = useState([])  ; 
   
 
   const[search , setSearch] = useState('') ; 
+
+
+
+  const[darkMode , setDarkMode] = useState(false) ; // this is for toggling thee mode from light to dark ; 
+
+  const handleToggle = () => {
+
+
+    console.log(darkMode);
+     setDarkMode(!darkMode) ; 
+   console.log(darkMode) ; 
+
+     
+  }
+
+
 
   const deleteNote = (id)  => {
 
@@ -52,10 +70,22 @@ const App = () => {  // function name should be in caps as well as name of js fi
 
   return (
 
+// to dynamically give a classname to an element ; 
 
 
+
+    <div className={ darkMode ? 'dark-mode' : 'no'}  >  
+
+
+   
     <div className="container">
+      
 
+        <header  >
+            <h1> Notes App</h1>
+
+            <button  onClick={handleToggle} className='toggle-button'> Toggle </button>
+        </header>
 
      <div className='search'>
      <FaSearch />
@@ -64,6 +94,9 @@ const App = () => {  // function name should be in caps as well as name of js fi
       </div>
        
        <NotesList notes = {notes.filter((note) => note.text.includes(search))} addNote = {addNote}  deleteNote = {deleteNote}/>
+
+    </div>
+
 
     </div>
   )
